@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creating a new loader should generate the correct html 1`] = `
+Loader {
+  "_holder": <div
+    id="holder"
+  >
+    <p
+      class="loader"
+    />
+  </div>,
+  "loaderHTML": <p
+    class="loader"
+  />,
+}
+`;

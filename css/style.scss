@@ -1,0 +1,105 @@
+@import "./base/fonts";
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "../node_modules/basiclightbox/dist/basicLightbox.min";
+@import "../node_modules/animate.css/animate.min";
+
+body {
+  margin-top: 10px;
+  background-color: #333;
+}
+.app {
+  width: 95%;
+  max-width: 450px;
+  height: 685px;
+  margin: 0 auto;
+  border: 1px solid #dc1a94;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  background-color: #fff;
+  &__header {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    font-size: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 24px;
+    background-color: #dc1a94;
+    color: white;
+    padding-bottom: 10px;
+  }
+  &__listHolder {
+    position: relative;
+    height: 635px;
+    overflow: hidden;
+    .list {
+      padding: 10px;
+      padding-top: 0px;
+      &__item {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid #dc1a94;
+        &:last-child {
+          border-bottom-width: 0px;
+        }
+        &__image {
+          display: block;
+          border: 1px solid #dc1a95;
+          border-radius: 10px;
+          height: 100px;
+          object-fit: cover;
+          overflow: hidden;
+          width: 100px;
+        }
+        &__title {
+          width: calc(100% - 120px);
+          font-family: "Open Sans", sans-serif;
+          line-height: 21px;
+          color: #333;
+        }
+        &__date {
+          position: absolute;
+          right: 0px;
+          bottom: 10px;
+          font-size: 13px;
+          font-family: "Open Sans", sans-serif;
+          color: #333;
+        }
+      }
+    }
+    .navigation {
+      display: flex;
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      width: calc(100% - 20px);
+      justify-content: space-between;
+      border-top: 1px solid #dc1a94;
+      padding-top: 10px;
+      .navigation__next,
+      .navigation__prev {
+        color: #dc1a94;
+      }
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  font-size: 16px;
+  text-align: center;
+  width: 76px;
+  height: 76px;
+  background-position: center center;
+  background-image: url("../images/spinner.gif");
+  margin-left: -38px;
+}
